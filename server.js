@@ -1,4 +1,5 @@
 const express = require('express')
+const helpers = require('express-helpers')
 const albums = require('./databases/albums.json')
 const artists = require('./databases/artists.json')
 const songs = require('./databases/songs.json')
@@ -7,13 +8,14 @@ const app = express()
 
 app.use(express.static('public'))
 app.set('view engine', 'ejs')
+helpers(app)
 
 app.get('/', function (req, res) {
-  res.render('index', {artists: artists, albums: albums})
+  res.render('index', {artists: artists, albums: albums, songs: songs})
 })
 
 app.get('/albums', function (req, res) {
-  res.render('albums', {albums: albums, artists: artists, songs:songs})
+  res.render('albums', {albums: albums, artists: artists, songs: songs})
 })
 
 app.get('/albums/:album_id', function (req, res) {
