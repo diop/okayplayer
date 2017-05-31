@@ -1,0 +1,11 @@
+<!-- <% include partials/header %> -->
+
+<h1> Okayplayer Albums Home</h1>
+
+<% albums.forEach(function(album){ %>
+    <li>
+        <%= album.id %> -- <%= album.title %> -- <%= album.artist_id %>
+    </li>
+<% }) %>
+
+// <!-- <% include partials/footer %> -->

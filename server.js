@@ -1,40 +1,39 @@
 const express = require('express')
+const albums = require('./databases/albums.json')
+const artists = require('./databases/artists.json')
+const songs = require('./databases/songs.json')
 const router = express.Router()
 const app = express()
 
+app.use(express.static('public'))
+app.set('view engine', 'ejs')
+
 app.get('/', function (req, res) {
-  res.send("Okayplayer!")
-  res.send("Main view is rendered at route /")
-  res.send("Main view shows a list of all artists")
-  res.send("Okayplayer!")
+  res.render('index')
 })
 
 app.get('/albums', function (req, res) {
-  res.send('Albums view is rendered at route /albums')
-  res.send('Albums view shows a list of all albums')
+  res.render('albums', {albums: albums})
 })
 
 app.get('/albums/:album_id', function (req, res) {
-  res.send('Individual album view file is called views/album.ejs')
-  res.send('Individual album view shows a list of the album’s songs ')
+  res.render('albums')
 })
 
 app.get('/artists', function (req, res) {
-  res.send('renders artists page')
+  res.render('artists')
 })
 
 app.get('/artists/:artist_id', function (req, res) {
-  res.send('Individual artist view is rendered at route /artists/:artist_id')
-  res.send('Individual artist view shows a list of the artist’s albums')
-
+   res.send('artists')
 })
 
 app.get('/songs', function (req, res) {
-  res.send('Songs view is rendered at route /songs')
+  res.render('songs')
 })
 
 app.get('/songs/:id', function (req, res) {
-  res.send('renders songs page')
+  res.send('songs')
 })
 
 app.get('*', function (req, res) {
