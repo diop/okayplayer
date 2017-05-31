@@ -9,7 +9,7 @@ app.use(express.static('public'))
 app.set('view engine', 'ejs')
 
 app.get('/', function (req, res) {
-  res.render('index')
+  res.render('index', {artists: artists, albums: albums})
 })
 
 app.get('/albums', function (req, res) {
@@ -17,19 +17,19 @@ app.get('/albums', function (req, res) {
 })
 
 app.get('/albums/:album_id', function (req, res) {
-  res.render('albums')
+  res.render('albums', {albums: albums})
 })
 
 app.get('/artists', function (req, res) {
-  res.render('artists')
+  res.render('artists', {artists: artists})
 })
 
 app.get('/artists/:artist_id', function (req, res) {
-   res.send('artists')
+   res.send('artists', {artists: artists})
 })
 
 app.get('/songs', function (req, res) {
-  res.render('songs')
+  res.render('songs', {songs: songs})
 })
 
 app.get('/songs/:id', function (req, res) {
