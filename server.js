@@ -13,7 +13,7 @@ app.get('/', function (req, res) {
 })
 
 app.get('/albums', function (req, res) {
-  res.render('albums', {albums: albums})
+  res.render('albums', {albums: albums, artists: artists, songs:songs})
 })
 
 app.get('/albums/:album_id', function (req, res) {
