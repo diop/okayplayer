@@ -31,7 +31,7 @@ app.get('/artists/:artist_id', function (req, res) {
 })
 
 app.get('/songs', function (req, res) {
-  res.render('songs', {songs: songs})
+  res.render('songs', {albums: albums, artists: artists, songs:songs})
 })
 
 app.get('/songs/:id', function (req, res) {
