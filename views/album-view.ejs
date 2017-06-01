@@ -1,0 +1,18 @@
+<% include partials/header %>
+
+<div class='jumbotron'>
+<h1> Okayplayer Albums</h1>
+<h1><%= year %></h1>
+</div>
+<div class="row">
+    <div class="col-lg-12">
+        <div class=" ">
+            <!-- loop over albums and render them -->
+            <% album.forEach((item) => { %>
+                <h4 class=" "><%= item.title %></h4>
+                <p class=" "><%= item.year %></p>
+            <% }) %>
+        </div>
+    </div>
+</div>
+<% include partials/footer %>

@@ -18,8 +18,12 @@ app.get('/albums', function (req, res) {
   res.render('albums', {albums: albums, artists: artists, songs: songs})
 })
 
-app.get('/albums/:album_id', function (req, res) {
-  res.render('albums', {albums: albums})
+app.get('/albums/:id', function (req, res) {
+    const album = albums.filter((obj) => {
+        return obj.id == req.params.id
+    })[0]
+
+  res.render('album-view', {album: album.title, year: album.year})
 })
 
 app.get('/artists', function (req, res) {
