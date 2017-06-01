@@ -18,21 +18,20 @@ app.get('/albums', function (req, res) {
   res.render('albums', {albums: albums, artists: artists, songs: songs})
 })
 
-app.get('/albums/:id', function (req, res) {
-    const album = albums.filter((obj) => {
-        return obj.id == req.params.id
-    })[0]
-
-  res.render('album-view', {album: album.title, year: album.year})
+app.get('/albums/:album_id', function (req, res) {
+  res.render('albums', {albums: albums})
 })
 
 app.get('/artists', function (req, res) {
   res.render('index', {artists: artists})
 })
 
-app.get('/artists/:id', function (req, res) {
-    const id = req.params.id
-   res.render('artists', {albums: albums, artists: artists, id: id})
+app.get('/albums/:id', function (req, res) {
+    const album = albums.filter((album) => {
+        return obj.id == req.params.id
+    })[0]
+
+  res.render('album-view', {artists: artists, albums: albums, songs: songs})
 })
 
 app.get('/songs', function (req, res) {
