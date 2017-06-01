@@ -1,25 +1,19 @@
 <% include partials/header %>
 
 <div class='jumbotron'>
-<h1> Okayplayer Albums</h1>
+<h1> Okayplayer Artists</h1>
 </div>
     <div class="row">
        <div class="col-lg-12">
-           <%  albums.forEach(function(album){ %>
+         <% artists.forEach(function(artist){ %>
            <% var count = 0; %>
-           <h2><%= album.title %> </h2>
-           <% artists.forEach(function(artist){ %>
+           <%  albums.forEach(function(album){ %>
                <% if(album.artist_id == artist.id) { %>
-                   <h4>Artist:  <%-link_to(artist.name, '/artists/'+artist.id) %> </h4>
+                 <% count++; %>
                <% }; %>
             <% }); %>
-            <% songs.forEach(function(song) { %>
-               <% if(song.album_id == album.id) { %>
-                 <% count++; %>
-                <% } %>
-            <%  }); %>
-            <h4>Songs: <%= count %> </h4>
-
+            <h4>Artist:  <%-link_to(artist.name, '/artists/'+artist.id) %> </h4>
+            <h4>Albums: <%= count %> </h4>
             <% }); %>
        </div>
      </div>

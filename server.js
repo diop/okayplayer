@@ -18,8 +18,19 @@ app.get('/albums', function (req, res) {
   res.render('albums', {albums: albums, artists: artists, songs: songs})
 })
 
-app.get('/albums/:album_id', function (req, res) {
-  res.render('albums', {albums: albums})
+app.get('/albums/:id', function (req, res) {
+  const id = parseInt(req.params.id);
+
+  const albumDisplay = albums.filter(function(album) {
+    return id === album.id
+  })[0];
+  albumDisplay.artist = artists.filter(function(artist) {
+    return albumDisplay.artist_id === artist.id;
+  })[0];
+  albumDisplay.song = songs.filter(function(song) {
+    return id === song.album_id
+  })
+  res.render('album-view', {albumDisplay})
 })
 
 app.get('/artists', function (req, res) {
