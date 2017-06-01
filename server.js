@@ -28,7 +28,7 @@ app.get('/artists', function (req, res) {
 
 app.get('/artists/:id', function (req, res) {
     const id = req.params.id
-   res.render('artists', {albums: albums, artists: artists, id: id})
+   res.render('artists', {albums: albums, artists: artists, id: id, songs:songs})
 })
 
 app.get('/songs', function (req, res) {
