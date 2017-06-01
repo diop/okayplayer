@@ -23,11 +23,12 @@ app.get('/albums/:album_id', function (req, res) {
 })
 
 app.get('/artists', function (req, res) {
-  res.render('artists', {artists: artists})
+  res.render('index', {artists: artists})
 })
 
-app.get('/artists/:artist_id', function (req, res) {
-   res.send('artists', {artists: artists})
+app.get('/artists/:id', function (req, res) {
+    const id = req.params.id
+   res.render('artists', {albums: albums, artists: artists, id: id})
 })
 
 app.get('/songs', function (req, res) {
@@ -35,7 +36,7 @@ app.get('/songs', function (req, res) {
 })
 
 app.get('/songs/:id', function (req, res) {
-  res.send('songs')
+  res.render('songs')
 })
 
 app.get('*', function (req, res) {
