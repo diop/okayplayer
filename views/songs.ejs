@@ -1,0 +1,45 @@
+<% include partials/header %>
+
+  <div class='jumbotron'>
+    <h1> Okayplayer Songs</h1>
+  </div>
+
+  <table class="table table-inverse">
+    <thead>
+      <tr>
+        <th>Song</th>
+        <th>Artist</th>
+        <th>Album</th>
+        <th>Length</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%  songs.forEach(function(song){ %>
+        <tr>
+
+          <td>
+            <%= song.title %>
+          </td>
+          <%  artists.forEach(function(artist){ %>
+          <%  albums.forEach(function(album){ %>
+              <% if (album.artist_id == artist.id && song.album_id == album.id) { %>
+                <td><%= artist.name %></td>
+                <td><%= album.title %></td>
+                <% var songLength = song.length/60; %>
+                <% var songFixed = songLength.toFixed(2) %>
+                <td><%= songFixed %></td>
+
+
+
+              <% }; %>
+            <% }) %>
+          <% }) %>
+          </tr>
+      <% }) %>
+    </tbody>
+  </table>
+
+
+
+
+  <% include partials/footer %>
