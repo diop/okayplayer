@@ -18,8 +18,12 @@
           <% albums.forEach(function(album) { %>
             <% if(album.artist_id == artist.id) { %>
                 <% count++; %>
+                <div class="col-lg-4">
+                <img class="thumbnail img-responsive"src= <%= album.img %> >
+                </div>
                <% } %>
            <%  }); %>
+
            <h2 style="display:inline; padding-right:2%;" >Albums: <%= count %>  </h2>
            <h2 style="display:inline;">Genre: <%= artist.genre %>  </h2>
            <% }; %>
@@ -40,6 +44,7 @@
               <% }; %>
           <% }); %>
           <h3 style="display:inline; padding-right: 2%;"> <%= count %> Songs </h3>
+
 
     <% }; %>
   <% }); %>

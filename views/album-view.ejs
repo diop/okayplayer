@@ -3,11 +3,17 @@
 <div class='jumbotron'>
   <h1> Okayplayer Albums</h1>
 </div>
-  <div>
+  <div class = "row">
+    <div class = "col-lg-8">
     <h1>Title: <%= albumDisplay.title %> </h1>
     <h4>Artist: <%= albumDisplay.artist.name %> </h4>
     <h4>Year: <%= albumDisplay.year %> </h4>
   </div>
+    <div class = "col-lg-4">
+      <img class="thumbnail img-responsive" src= <%= albumDisplay.img %> >
+    </div>
+</div>
+
 
     <div class = "row">
       <div class = "col-lg-6">

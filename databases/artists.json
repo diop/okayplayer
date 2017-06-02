@@ -1,9 +1,9 @@
 [
-  { "id": 1, "name": "D'Angelo", "genre": "Neo-Soul" },
-  { "id": 2, "name": "Horse Feathers", "genre": "Folk" },
-  { "id": 3, "name": "Lauryn Hill", "genre": "Hip Hop" },
-  { "id": 4, "name": "M.I.A.", "genre": "Hip Hop" },
-  { "id": 5, "name": "Radiohead", "genre": "Electronic Rock" },
-  { "id": 6, "name": "Santogold", "genre": "Alternative Hip Hop" },
-  { "id": 7, "name": "TV On The Radio", "genre": "Rock" }
+  { "id": 1, "name": "D'Angelo", "genre": "Neo-Soul", "img": "https://lastfm-img2.akamaized.net/i/u/770x0/be4e635b407840d094050cbc4774fa57.jpg"  },
+  { "id": 2, "name": "Horse Feathers", "genre": "Folk", "img": "https://lastfm-img2.akamaized.net/i/u/770x0/4c44400447c9459e9e12f8ecb7710520.jpg"  },
+  { "id": 3, "name": "Lauryn Hill", "genre": "Hip Hop", "img": "https://lastfm-img2.akamaized.net/i/u/770x0/0c5143f472794095b8bebfc8f358cac8.jpg"  },
+  { "id": 4, "name": "M.I.A.", "genre": "Hip Hop", "img": "https://lastfm-img2.akamaized.net/i/u/770x0/492e9d44256e4d37cd94417577d2207b.jpg"  },
+  { "id": 5, "name": "Radiohead", "genre": "Electronic Rock", "img": "https://lastfm-img2.akamaized.net/i/u/770x0/043db34cab21362a102d4edb01a36bc0.jpg"  },
+  { "id": 6, "name": "Santogold", "genre": "Alternative Hip Hop", "img": "https://lastfm-img2.akamaized.net/i/u/770x0/b1b5919eb9fb26edff93e4fd64f340be.jpg"  },
+  { "id": 7, "name": "TV On The Radio", "genre": "Rock", "img": "https://lastfm-img2.akamaized.net/i/u/770x0/a51aebb3491b452ab2bf337ff597598d.jpg"  }
 ]
