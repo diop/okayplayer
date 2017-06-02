@@ -26,8 +26,11 @@
                 <td><%= artist.name %></td>
                 <td><%= album.title %></td>
                 <% var songLength = song.length/60; %>
-                <% var songFixed = songLength.toFixed(2) %>
-                <td><%= songFixed %></td>
+                <% var songMinutes = Math.floor(songLength) %>
+                <% var songSeconds = (song.length % 60) %>
+                <% var secondPadding = "0" + songSeconds %>
+
+                <td><%= songMinutes + ":" + secondPadding.slice(-2) %></td>
 
 
 
@@ -43,4 +46,3 @@
 
 
   <% include partials/footer %>
-

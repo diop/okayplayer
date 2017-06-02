@@ -26,9 +26,6 @@
         <h5>Length</h5>
     </div>
     </div>
-
-
-
     <div class = "row">
       <%  albumDisplay.song.forEach(function(song){ %>
       <div class = "col-lg-6">
@@ -38,9 +35,13 @@
         <h5> <%= song.track_no %> </h5>
       </div>
       <div class = "col-lg-3">
-        <% var songConverted = song.length/60 %>
-        <% var songFixed = songConverted.toFixed(2) %>
-        <h5>  <%= songFixed %> </h5>
+      <% var songLength = song.length/60; %>
+      <% var songMinutes = Math.floor(songLength) %>
+      <% var songSeconds = (song.length % 60) %>
+      <% var secondPadding = "0" + songSeconds %>
+
+      <h5>  <%= songMinutes + ":" + secondPadding.slice(-2) %> </h5>
+
 
     </div>
     <% }); %>
