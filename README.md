@@ -1,8 +1,8 @@
 # Okayplayer Music Player
 
 Team Members
-[José Moreno]()
-[Fodé Diop]()
+* [José Moreno](https://github.com/josemoreno90)
+* [Fodé Diop](https://github.com/diop)
 
 # Instructions
 * Clone && CD to Repo
