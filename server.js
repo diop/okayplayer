@@ -24,7 +24,7 @@ app.get('/albums/:id', function (req, res) {
   const albumDisplay = albums.filter(function(album) {
     return id === album.id
   })[0];
-  albumDisplay.artist = artists.filter(function(artist) {
+  albumDisplay.artist = artists.filter((artist) => {
     return albumDisplay.artist_id === artist.id;
   })[0];
   albumDisplay.song = songs.filter(function(song) {
