@@ -3,16 +3,41 @@
 <div class='jumbotron'>
   <h1> Okayplayer Albums</h1>
 </div>
-    
-    <h2> <%= albumDisplay.title %> </h2>
-    <h2> <%= albumDisplay.artist.name %> </h2>
-    <h2> <%= albumDisplay.year %> </h2>
+  <div>
+    <h1>Title: <%= albumDisplay.title %> </h1>
+    <h4>Artist: <%= albumDisplay.artist.name %> </h4>
+    <h4>Year: <%= albumDisplay.year %> </h4>
+  </div>
+
+    <div class = "row">
+      <div class = "col-lg-6">
+        <h5>Song</h5>
+      </div>
+      <div class = "col-lg-3">
+        <h5>Track</h5>
+      </div>
+      <div class = "col-lg-3">
+        <h5>Length</h5>
+    </div>
+    </div>
 
 
 
+    <div class = "row">
+      <%  albumDisplay.song.forEach(function(song){ %>
+      <div class = "col-lg-6">
+        <h5> <%= song.title %> </h5>
+      </div>
+      <div class = "col-lg-3">
+        <h5> <%= song.track_no %> </h5>
+      </div>
+      <div class = "col-lg-3">
+        <% var songConverted = song.length/60 %>
+        <% var songFixed = songConverted.toFixed(2) %>
+        <h5>  <%= songFixed %> </h5>
 
-
-
-
+    </div>
+    <% }); %>
+  </div>
 
 <% include partials/footer %>
