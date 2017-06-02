@@ -3,11 +3,17 @@
 <div class='jumbotron'>
   <h1> Okayplayer Albums</h1>
 </div>
-  <div>
+  <div class = "row">
+    <div class = "col-lg-8">
     <h1>Title: <%= albumDisplay.title %> </h1>
     <h4>Artist: <%= albumDisplay.artist.name %> </h4>
     <h4>Year: <%= albumDisplay.year %> </h4>
   </div>
+    <div class = "col-lg-4">
+      <img class="thumbnail img-responsive" src= <%= albumDisplay.img %> >
+    </div>
+</div>
+
 
     <div class = "row">
       <div class = "col-lg-6">
@@ -20,9 +26,6 @@
         <h5>Length</h5>
     </div>
     </div>
-
-
-
     <div class = "row">
       <%  albumDisplay.song.forEach(function(song){ %>
       <div class = "col-lg-6">
@@ -32,9 +35,13 @@
         <h5> <%= song.track_no %> </h5>
       </div>
       <div class = "col-lg-3">
-        <% var songConverted = song.length/60 %>
-        <% var songFixed = songConverted.toFixed(2) %>
-        <h5>  <%= songFixed %> </h5>
+      <% var songLength = song.length/60; %>
+      <% var songMinutes = Math.floor(songLength) %>
+      <% var songSeconds = (song.length % 60) %>
+      <% var secondPadding = "0" + songSeconds %>
+
+      <h5>  <%= songMinutes + ":" + secondPadding.slice(-2) %> </h5>
+
 
     </div>
     <% }); %>

@@ -3,18 +3,27 @@
 <div class='jumbotron'>
 <h1> Okayplayer Artists</h1>
 </div>
-    <div class="row">
-       <div class="col-lg-12">
+
          <% artists.forEach(function(artist){ %>
            <% var count = 0; %>
            <%  albums.forEach(function(album){ %>
                <% if(album.artist_id == artist.id) { %>
+<div class="row">
+                    <div class="col-lg-8">
                  <% count++; %>
                <% }; %>
             <% }); %>
+            </div>
+          </div>
+
             <h4>Artist:  <%-link_to(artist.name, '/artists/'+artist.id) %> </h4>
             <h4>Albums: <%= count %> </h4>
+            <div class="col-lg-4">
+            <img class="thumbnail img-responsive"src= <%= artist.img %> >
+            </div>
+
+
             <% }); %>
-       </div>
-     </div>
+
+
 <% include partials/footer %>

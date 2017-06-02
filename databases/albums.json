@@ -1,12 +1,12 @@
 [
-  { "id": 1, "artist_id": 1, "title": "Voodoo", "year": 2000 },
-  { "id": 2, "artist_id": 1, "title": "Brown Sugar", "year": 1995 },
-  { "id": 3, "artist_id": 2, "title": "House with No Home", "year": 2008 },
-  { "id": 4, "artist_id": 3, "title": "The Miseducation Of Lauryn Hill", "year": 1998 },
-  { "id": 5, "artist_id": 4, "title": "Kala", "year": 2007 },
-  { "id": 6, "artist_id": 5, "title": "In Rainbows", "year": 2007 },
-  { "id": 7, "artist_id": 5, "title": "Amnesiac", "year": 2001 },
-  { "id": 8, "artist_id": 6, "title": "Santogold", "year": 2008 },
-  { "id": 9, "artist_id": 7, "title": "Dear Science", "year": 2008 },
-  { "id": 10, "artist_id": 7, "title": "Desperate Youth, Blood Thirsty Babes", "year": 2004 }
+  { "id": 1, "artist_id": 1, "title": "Voodoo", "year": 2000, "img": "https://lastfm-img2.akamaized.net/i/u/174s/1c4f0e845e994b82cbdbcad0eb8cc4a6.jpg"},
+  { "id": 2, "artist_id": 1, "title": "Brown Sugar", "year": 1995, "img": "https://lastfm-img2.akamaized.net/i/u/174s/97f30fcd9e3448a5c83d12731745208f.jpg"},
+  { "id": 3, "artist_id": 2, "title": "House with No Home", "year": 2008, "img": "https://lastfm-img2.akamaized.net/i/u/174s/a70af5d6f87141f79a6fff10aa4753cb.jpg"},
+  { "id": 4, "artist_id": 3, "title": "The Miseducation Of Lauryn Hill", "year": 1998, "img": "https://lastfm-img2.akamaized.net/i/u/174s/20823a3c6b074391bb408d56282f1f5a.jpg"},
+  { "id": 5, "artist_id": 4, "title": "Kala", "year": 2007, "img": "https://lastfm-img2.akamaized.net/i/u/174s/23b5957305a44240c23529cd5d68e7f7.jpg"},
+  { "id": 6, "artist_id": 5, "title": "In Rainbows", "year": 2007, "img": "https://lastfm-img2.akamaized.net/i/u/174s/8d91b7dd13084606b99d756175917f7d.jpg"},
+  { "id": 7, "artist_id": 5, "title": "Amnesiac", "year": 2001, "img": "https://lastfm-img2.akamaized.net/i/u/174s/0acb1e3f81c3c06454ad3ade574fbb0d.jpg"},
+  { "id": 8, "artist_id": 6, "title": "Santogold", "year": 2008, "img": "https://lastfm-img2.akamaized.net/i/u/174s/b56a163b5043412a85d365bce0197800.jpg"},
+  { "id": 9, "artist_id": 7, "title": "Dear Science", "year": 2008, "img": "https://lastfm-img2.akamaized.net/i/u/174s/db087930279745f387dd0f892b7d6a07.jpg"},
+  { "id": 10, "artist_id": 7, "title": "Desperate Youth, Blood Thirsty Babes", "year": 2004, "img": "https://lastfm-img2.akamaized.net/i/u/174s/019e4c78d41a5f0e2b607818d77e2f76.jpg"}
 ]
