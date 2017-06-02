@@ -1,7 +1,17 @@
-## Okayplayer Music Player
-## Specs
+# Okayplayer Music Player
 
-# Stage 1
+Team Members
+[José Moreno]()
+[Fodé Diop]()
+
+# Instructions
+* Clone && CD to Repo
+* npm install (to get dependencies)
+* node server.js (to start server)
+
+# Specs
+
+## Stage 1
 
 * [ ] Repo (your artifact) is created on GitHub
 * [ ] Repo follows a conventional file structure for an Express.js app:
@@ -15,7 +25,7 @@
 * [ ] All package dependencies are defined in package.json
 * [ ] The artifact produced is properly licensed, preferably with the MIT license
 
-# Stage 2
+## Stage 2
 
 * [ ] EJS is installed and set up for HTML templating
 * [ ] View template files are created in the /views subdirectory
@@ -37,7 +47,7 @@
 * [ ] CSS is organized into one or more files in the public/ directory
 * [ ] CSS declarations are well-named and formatted (consider using this small guide)
 
-# Stage 3
+## Stage 3
 
 * [ ] Main view (/) shows all artists from the fake artists data.
 * [ ] Main view shows artist name and genre.
@@ -57,7 +67,7 @@
 * [ ] Album view each song title, its track number, and length in seconds.
 * [ ] Artist name on album view links to the artist view (/artists/:artist_id).
 
-# Stage 4
+## Stage 4
 
 * [ ] Main view (/) shows an album count for each artist.
 * [ ] Album list view (/albums) shows a song count for each album.
@@ -69,7 +79,7 @@
 * [ ] Actual artist profile images are used instead of placeholders on main view (/) and artist view (/artists/:artist_id). Hint: once you find an image (Google image search is a good place for this), you can add the URL to the artists.json fake data file.
 * [ ] App uses a CSS framework like Twitter bootstrap or Yahoo’s Pure.css.
 
-# Stage 5
+## Stage 5
 
 * [ ] All views use an include for the header nav (with links to “Artists”, “Albums” and “Songs”).
 * [ ] Header nav include is kept in the file views/layout/header.ejs.
