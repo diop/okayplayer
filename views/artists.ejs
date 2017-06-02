@@ -2,11 +2,10 @@
 
 <div class='jumbotron'>
 <%  artists.forEach(function(artist){ %>
-
-<%  if(artist.id == id) { %>
-<h1> <%= artist.name %></h1>
-<% } %>
-<% }); %>
+  <%  if(artist.id == id) { %>
+        <h1> <%= artist.name %></h1>
+      <% } %>
+  <% }); %>
 </div>
 
 <div class = "container">
@@ -14,42 +13,37 @@
     <div class = "col-lg-12">
       <%  artists.forEach(function(artist){ %>
         <% if (id == artist.id ) { %>
-          <% var count = 0; %>
-          <% albums.forEach(function(album) { %>
-            <% if(album.artist_id == artist.id) { %>
-                <% count++; %>
-               <% } %>
-           <%  }); %>
+            <% var count = 0; %>
+            <% albums.forEach(function(album) { %>
+                <% if(album.artist_id == artist.id) { %>
+                    <% count++; %>
+                  <% } %>
+            <%  }); %>
            <h2 style="display:inline; padding-right:2%;" >Albums: <%= count %>  </h2>
            <h2 style="display:inline;">Genre: <%= artist.genre %>  </h2>
-           <% }; %>
+        <% }; %>
       <% }); %>
     </div>
   </div>
+
   <div class = "row">
     <div class = "col-lg-12">
       <% albums.forEach(function(album) { %>
-        <% var count = 0; %>
-        <% if(album.artist_id == id) { %>
-          <% var albumTitle = album.title; %>
-          <h3 style="padding-right:2%;"><strong> <%- link_to(albumTitle, '/albums/'+album.id) %>  </strong></h3>
-          <h3 style="display:inline"> Year: <%= album.year %> - </h3>
-          <% songs.forEach(function(song) { %>
-            <% if(song.album_id == album.id) { %>
-              <% count++; %>
-              <% }; %>
-          <% }); %>
-          <h3 style="display:inline; padding-right: 2%;"> <%= count %> Songs </h3>
-
-    <% }; %>
-  <% }); %>
+          <% var count = 0; %>
+          <% if(album.artist_id == id) { %>
+              <% var albumTitle = album.title; %>
+              <h3 style="padding-right:2%;"><strong> <%- link_to(albumTitle, '/albums/'+album.id) %>  </strong></h3>
+              <h3 style="display:inline"> Year: <%= album.year %> - </h3>
+              <% songs.forEach(function(song) { %>
+                  <% if(song.album_id == album.id) { %>
+                      <% count++; %>
+                  <% }; %>
+              <% }); %>
+              <h3 style="display:inline; padding-right: 2%;"> <%= count %> Songs </h3>
+          <% }; %>
+      <% }); %>
     </div>
   </div>
 </div>
-
-
-
-
-
 
 <% include partials/footer %>

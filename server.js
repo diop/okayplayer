@@ -19,14 +19,16 @@ app.get('/albums', function (req, res) {
 })
 
 app.get('/albums/:id', function (req, res) {
-  const id = parseInt(req.params.id);
+  const id = parseInt(req.params.id)
 
   const albumDisplay = albums.filter(function(album) {
     return id === album.id
   })[0];
+  console.log(albumDisplay)
   albumDisplay.artist = artists.filter((artist) => {
-    return albumDisplay.artist_id === artist.id;
+    return albumDisplay.artist_id === artist.id
   })[0];
+  console.log(albumDisplay.artist)
   albumDisplay.song = songs.filter(function(song) {
     return id === song.album_id
   })
